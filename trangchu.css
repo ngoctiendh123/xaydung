@@ -1,0 +1,192 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-bottom: 60px; /* Để footer không che nội dung */
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+#menu-toggle {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+
+/* Sidebar menu */
+#menu-section {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #222;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+#menu-section.menu-active {
+    left: 0;
+}
+
+#menu-section nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#menu-section nav ul li {
+    padding: 15px 20px;
+    border-bottom: 1px solid #444;
+}
+
+#menu-section nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: block;
+    transition: background 0.3s;
+}
+
+#menu-section nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dự án tiêu biểu */
+#du-an-hinh-anh {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#du-an-hinh-anh h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+/* Lưới ảnh */
+/* Lưới ảnh */
+#du-an-hinh-anh .du-an-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Chia đều ảnh */
+    gap: 20px;
+    padding: 10px;
+    justify-items: center; /* Căn giữa ảnh trong lưới */
+}
+
+/* Thẻ ảnh dự án */
+.du-an {
+    width: 100%;
+    max-width: 350px;  /* Kích thước tối đa mỗi ảnh */
+    min-height: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+
+.du-an:hover {
+    transform: translateY(-5px);
+}
+
+/* Hình ảnh */
+.du-an img {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Giữ tỷ lệ khung ảnh đẹp, linh hoạt */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+    display: block;
+}
+
+/* Tiêu đề & mô tả */
+.du-an h3 {
+    font-size: 1.4rem;
+    margin: 15px 0 10px;
+    text-align: center;
+    color: #4CAF50;
+}
+
+.du-an p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 20px 20px;
+    color: #555;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    #du-an-hinh-anh {
+        padding: 20px 10px;
+    }
+
+    .du-an img {
+        aspect-ratio: 16 / 10;
+    }
+
+    .du-an h3 {
+        font-size: 1.2rem;
+    }
+
+    .du-an p {
+        font-size: 0.95rem;
+    }
+}

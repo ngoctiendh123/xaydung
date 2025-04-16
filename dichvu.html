@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dịch Vụ Xây Dựng</title>
+  <link rel="stylesheet" href="dichvu.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Chào Mừng Đến Với Dịch Vụ Xây Dựng</h1>
+    <button id="menu-toggle">☰</button>
+  </header>
+
+  <!-- Menu Sidebar -->
+  <aside id="menu-section">
+    <nav>
+      <ul>
+        <li><a href="trangchu.html">Trang Chủ</a></li>
+        
+        <!-- Thêm các mục khác nếu muốn -->
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Nội dung chính -->
+  <div class="container">
+    <h1 class="title">Danh Sách Dịch Vụ</h1>
+    <div class="service-list">
+      <div class="service-item" onclick="toggleDetail(this)">
+        <h2>Thi công nhà ở</h2>
+        <p class="detail">Thi công nhà cấp 4, nhà phố, biệt thự, theo bản vẽ và yêu cầu khách hàng.</p>
+      </div>
+      <div class="service-item" onclick="toggleDetail(this)">
+        <h2>Sửa chữa nhà</h2>
+        <p class="detail">Sửa chữa trần, tường, điện nước, cải tạo nâng tầng, xử lý thấm dột.</p>
+      </div>
+      <div class="service-item" onclick="toggleDetail(this)">
+        <h2>Thiết kế nội thất</h2>
+        <p class="detail">Tư vấn thiết kế và thi công nội thất cho nhà ở, văn phòng, showroom.</p>
+      </div>
+      <div class="service-item" onclick="toggleDetail(this)">
+        <h2>Cải tạo công trình</h2>
+        <p class="detail">Cải tạo nhà cũ, nâng cấp không gian sống hiện đại, tối ưu công năng.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="dichvu.js"></script>
+</body>
+</html>
