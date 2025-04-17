@@ -27,21 +27,22 @@ h1 {
 }
 
 #menu-toggle {
-    font-size: 24px;
+    font-size: 30px;
     background: none;
     border: none;
     color: white;
     cursor: pointer;
     position: absolute;
     left: 20px;
-    bottom: 20px;
-}
-
-/* Sidebar menu */
-#menu-section {
+    top: 20px;
+    z-index: 1000; /* Đảm bảo nút có z-index cao */
+  }
+  
+  /* Sidebar Menu */
+  #menu-section {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Ban đầu ẩn */
     width: 250px;
     height: 100%;
     background-color: #222;
@@ -49,33 +50,33 @@ h1 {
     padding-top: 60px;
     transition: left 0.3s ease-in-out;
     z-index: 999;
-}
-
-#menu-section.menu-active {
-    left: 0;
-}
-
-#menu-section nav ul {
+  }
+  
+  #menu-section.menu-active {
+    left: 0; /* Hiển thị khi có class menu-active */
+  }
+  
+  #menu-section nav ul {
     list-style: none;
     padding: 0;
-}
-
-#menu-section nav ul li {
+  }
+  
+  #menu-section nav ul li {
     padding: 15px 20px;
     border-bottom: 1px solid #444;
-}
-
-#menu-section nav ul li a {
+  }
+  
+  #menu-section nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
     display: block;
     transition: background 0.3s;
-}
-
-#menu-section nav ul li a:hover {
+  }
+  
+  #menu-section nav ul li a:hover {
     background-color: #4CAF50;
-}
+  }
 
 /* Main content */
 main {
